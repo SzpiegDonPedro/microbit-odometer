@@ -1,5 +1,7 @@
 datalogger.onLogFull(function () {
     basic.showString("Log full")
+    basic.pause(1000)
+    basic.showString("For delete - press logo")
 })
 input.onButtonPressed(Button.A, function () {
     start = input.runningTime()
@@ -36,7 +38,7 @@ input.onGesture(Gesture.TiltRight, function () {
         meters = 0
     }
 })
-input.onGesture(Gesture.LogoDown, function () {
+input.onLogoEvent(TouchButtonEvent.Pressed, function () {
     datalogger.deleteLog()
     basic.showIcon(IconNames.Skull)
     basic.pause(500)
