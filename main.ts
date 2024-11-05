@@ -46,7 +46,6 @@ let stop = 0
 let start = 0
 let meters = 0
 let memory = 0
-datalogger.mirrorToSerial(true)
 memory = 0
 meters = 0
 start = 0
